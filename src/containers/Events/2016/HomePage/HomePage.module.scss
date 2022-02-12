@@ -1,0 +1,39 @@
+@import "../../../../sass/general.scss";
+.homePage{
+    flex-grow: 1;
+    padding-bottom: 40px;
+
+}
+.container{
+    width: 90%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+.marTop{
+    margin-top: 55px;
+}
+.marqueeContainer{
+    $height: calc(60px + 6vw); 
+    font-size: $height;
+    height: $height;
+    margin-top: 2vw;
+    // @include fontSize(.85em,2.7em);
+}
+.themeDesc,.desc{
+
+    @include fontSize(.85em,2.7em);
+}
+.themeDesc{
+    color: rgba(0,0,0,.8);
+    font-family: Roboto;
+    line-height: 1.7em;
+}
+.carouselContainer{
+    height: calc(100vh - 75px);
+    // height: 500px;
+    // width: 90%;
+}
+.timerContainer{
+    max-width: 500px;
+    margin-top: 40px;
+}

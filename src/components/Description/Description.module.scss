@@ -1,0 +1,17 @@
+.title{
+    font-size: 1.5em;
+    font-family: sans-serif;
+    color: rgba(0,0,0,.9);
+}
+.description{
+    line-height: 1.6em;
+    // font-size: 1.16em;
+    color: rgba(0,0,0,.85);
+    // font-family: Helvetica;
+    a{
+        color: #1A237E;
+        &:hover{
+            text-decoration: underline !important;
+        }
+    }
+}

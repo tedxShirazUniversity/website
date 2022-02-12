@@ -1,0 +1,76 @@
+@import "../../sass/general.scss";
+$panelTransformTime: .2s;
+.container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    transform:translateX(100%);
+    transition: transform 0s $panelTransformTime;
+    .overlay{
+        flex: 1 1 0;
+        transition: background $panelTransformTime;
+    }
+    .panelContainer {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 80%;
+        max-width: 420px;
+        height: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        @include fontSize(.75em, 2.5em);
+        background-color: #fff;
+        flex-direction: column;
+        padding: 0 1.9em;
+        // overflow-y: scroll;
+        transform: translateX(100%);
+        transition: transform $panelTransformTime cubic-bezier(0.44, 0.1, 0.54, 1.02);
+        .header {
+            text-align: center;
+            font-size: 2em;
+            font-weight: 500;
+            font-family: Lato;
+            color: rgba(0, 0, 0, .8);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            right: 0;
+            background-color: #fff;
+            z-index: 99999;
+            .closeButton{
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                width: 50px;
+                justify-content: center;
+            }
+        }
+    
+        .cardContainer {
+            margin-bottom: 1.7em;
+            padding: 10px 0;
+        }
+    }
+    
+    
+    
+    &.expand{
+        transition: transform 0s;
+        transform:translateX(0);
+        .overlay{
+            background-color: rgba(0,0,0,.4);
+        }
+        .panelContainer{
+            transform: translateX(0);
+        }
+    }
+    
+}

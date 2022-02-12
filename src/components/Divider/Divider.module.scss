@@ -1,0 +1,32 @@
+.container{
+    $textMargin:8px;
+    $dividerWidth:1px;
+
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    .title{
+        user-select: none;
+        font-size: .9em;
+        opacity: .8;
+    }
+    .before,.after{
+        background-color: #000;
+        height: $dividerWidth;
+        opacity: .2;
+        flex: 1 1 0;
+    }
+    .before{
+        margin-right: $textMargin;
+    }
+    .after{
+        margin-left: $textMargin;   
+    }
+    .none{
+        display: none;
+    }
+    .noMargin{
+        margin: 0;
+
+    }
+}

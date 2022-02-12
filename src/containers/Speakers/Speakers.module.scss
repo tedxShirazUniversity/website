@@ -1,0 +1,10 @@
+.container{
+    width: 90%;
+    max-width: 1600px ;
+    margin: 0 auto;
+    margin-top: calc( 50px + 3vw );
+
+    .textImgContainer{
+        margin-bottom: calc( 50px + 3vw );
+    }
+}

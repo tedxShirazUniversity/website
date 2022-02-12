@@ -1,0 +1,70 @@
+.bg{
+    background-color: #000;
+    overflow: hidden;
+}
+.container{
+    background-color: #000;
+    padding: 180px 0;
+    position: relative;
+    animation: blurAnim 4s infinite ease-out;
+    overflow: hidden;
+    user-select: none;
+    
+    .text{
+        font-size: 21em;
+        color: #fff;
+        margin: 0 auto;
+        text-align: center;
+        font-family: sans-serif;
+        font-weight: 900;
+        animation: teanim 4s ease-out forwards;
+    }
+    .overlay{
+        position: absolute;
+        // background-color: rgba(255,0,0,.4);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // filter: blur(15px);
+
+    }
+}
+
+@keyframes teanim{
+    0%{
+        letter-spacing: -.5em;
+        color: rgba(255,255,255,.1);
+        filter: contrast(10);
+    }
+    50%{
+        letter-spacing: initial;
+        color: rgba(255,255,255,1);
+    }
+}
+@keyframes blurAnim{
+    0%{
+        filter: blur(5px) contrast(10);
+
+    }
+    20%{
+        filter: blur(20px) contrast(20);
+        
+    }
+    30%{
+        filter: blur(10px) contrast(10);
+
+    }
+
+    80%{
+        filter: blur(20px) contrast(20);
+
+    }
+    95%{
+        // filter: blur(px) contrast(1);
+    }
+    100%{
+        filter: blur(1px) contrast(1);
+        
+    }
+}

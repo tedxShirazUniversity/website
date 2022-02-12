@@ -1,0 +1,84 @@
+@import "../../sass/general.scss";
+$spacing:20px;
+
+.timer {
+    // width: 90%;
+    // max-width: 500px;
+    display: flex;
+    font-family: Lato;
+    flex-direction: column;
+    @include fontSize(.75em, 1.5em);
+
+    .logoContainer {
+        // width: 90%;
+        img {
+            width: 100%;
+        }
+    }
+    .day,
+    .hour {
+        display: flex;
+        align-items: center;
+        
+        .icon {
+            font-size: 1em;
+            margin-right: 5px;
+        }
+    }
+    .day {
+        font-size: 2.3em;
+        font-weight: 900;
+        opacity: .9;
+        padding-top: $spacing;
+        
+    }
+
+    .hour {
+        font-size: 1.6em;
+        opacity: .8;
+        margin-left: 5px;
+        margin-top: 8px;
+    }
+    
+
+    .linksContainer {
+        margin-top: $spacing;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        button {
+            width: 49%;
+            padding: calc(5px + .55em) 0;
+            border: none;
+            font-size: 1.27em;
+            border-radius: 3px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition:background .2s, letter-spacing .2s ease;
+
+            &:hover{
+                letter-spacing: 1px;
+            }
+            
+
+            $primColor:rgba(245, 43, 9, 1);
+            &.primary {
+                background-color: $primColor;
+                color: #fff;
+                &:hover{
+                    background-color: darken($primColor,3);
+                }
+            }
+
+            $secColor:#ddd;
+            &.secondary {
+                background-color: #ddd;
+                // border: 1px solid rgba(0, 0, 0, .3);
+                &:hover{
+                    background-color: lighten($secColor,5);
+                }
+            }
+        }
+    }
+}

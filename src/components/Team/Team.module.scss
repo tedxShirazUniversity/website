@@ -1,0 +1,57 @@
+@import "../../sass/theme.scss";
+.container {
+    // margin-top: 100px;
+    margin-top: 3vw;
+    flex-grow: 1;
+    .teamContainer {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 0 auto;
+        // align-items: flex-start;
+        .filter {
+            display: none;
+        }
+    }
+    .cardContainer {
+        max-width: 260px;
+        padding: 10px 10px;
+        display: flex;
+        justify-content: center;
+    }
+}
+.buttonsContainer {
+    width: 90%;
+    margin: 0 auto 20px auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    .otherBtn,
+    .filterBtn {
+        border: none;
+        padding: .4em .6em;
+        background-color: #fff;
+        font-family: 'Montserrat';
+        color: rgba(0, 0, 0, .8);
+        cursor: pointer;
+    }
+    .filterBtn {
+        font-size: 1.1em;
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+
+        span {
+            margin-left: 8px;
+        }
+    }
+    .otherBtn{
+        display: none;
+        &.active{
+            color: $mainColor;
+        }
+    }
+}    

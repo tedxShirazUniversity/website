@@ -1,0 +1,33 @@
+.button {
+    color: #f00;
+    cursor: pointer;
+}
+
+// .container {
+//     // margin: 0 auto;
+//     // margin-top: 200px;
+//     // max-width: 400px;
+//     // line-height: 1.5em;
+
+// }
+
+.paragraph {
+    overflow: hidden;
+
+    &.hide {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+    }
+}
+
+// @supports (-webkit-line-clamp: 3) {
+//     .container{
+//         div{
+//             display: -webkit-box;
+//             -webkit-line-clamp: 3;
+//             -webkit-box-orient: vertical; 
+//             // height: auto;
+//             // max-height:4.5em;
+//         }
+//     }
+// }

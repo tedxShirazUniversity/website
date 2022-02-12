@@ -1,0 +1,122 @@
+@import "../../../sass/general.scss";
+.homePage{
+    flex-grow: 1;
+    padding-bottom: 40px;
+
+}
+.container{
+    width: 90%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+.marTop{
+    margin-top: 55px;
+}
+.marqueeContainer{
+    $height: calc(60px + 6vw); 
+    font-size: $height;
+    height: $height;
+    margin-top: 2vw;
+    // @include fontSize(.85em,2.7em);
+}
+.themeDesc,.desc{
+
+    @include fontSize(.85em,2.7em);
+}
+.themeDesc{
+    color: rgba(0,0,0,.8);
+    font-family: Roboto;
+    line-height: 1.7em;
+}
+.carouselContainer{
+    height: calc(100vh - 75px);
+    // height: 500px;
+    // width: 90%;
+}
+.timerContainer{
+    max-width: 500px;
+    margin-top: 40px;
+}
+.bannerContainer{
+    position: relative;
+    cursor: pointer;
+    // min-height:200px;
+    // height: 300px;
+    width: 100%;
+    height:17vw;
+    min-height: 150px;
+    .bannerBg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width:100%;
+        height: 100%;
+    }
+    .bannerLogo{
+        position: absolute;
+        top: 0;
+        right: 1%;
+        height:100%;
+    }
+    .bannerTxtContainer{
+        position: absolute;
+        top: 0;
+        left: 1%;
+        height: 100%;
+        font-family: "Helvetica";
+        font-weight: 900;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        font-weight: 900;
+        color: #fff;
+        // font-size: clamp(.);
+        font-size: clamp(.5em,1.3vw,1em);
+        .bannerTxt{
+            font-size:2em;
+        }
+        .countdown{
+            font-size:1.5em;
+            margin: 1em 0;
+        }
+        .button{
+            color:#000;
+            background-color: rgba(255,255,255,.9);
+            padding:.5em .6em;
+            border-radius: 3px;
+            font-size: 1.3em;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            transition:background .2s;
+            svg{
+                font-size:inherit;
+                // transform:translateY(1px);
+            }
+        }
+    }
+    &:hover .button{
+        background-color: rgba(255,255,255,1);
+    }
+}
+
+.speakersContainer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:30px;
+    .item{
+        flex: 33.33%;
+        flex-grow: 0;
+        display: flex;
+        padding:clamp(5px,1.5vw,25px);
+        @media screen and (max-width: 650px) {
+            flex: 50%;
+            flex-grow: 0;
+        }
+        img{
+            width: 100%;
+        }
+        
+    }
+}

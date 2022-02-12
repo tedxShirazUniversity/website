@@ -1,0 +1,117 @@
+.footer{
+    background-color: #333;
+    background-image:url(../../assets/images/textures/header-bg.png);
+    background-size: cover;
+    
+    color: #fff;
+    font-size: .8em;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 15px;
+    font-family: "Lato";
+    .row1{
+        display: flex;
+        flex-direction: column;
+        .links{
+            order:2;
+            // background-color: #f00;
+            margin: 35px 0 20px 0;
+            
+            .logo{
+                display: none;
+            }
+            .socialLinksContainer{
+                font-size: .85em;
+                display: flex;
+                justify-content: center;
+            }
+
+        }
+        .newsletter{
+            max-width: 400px;
+            margin: 0 auto;
+            .title{
+                font-size: 1.2em;
+                margin:0 0 12px 0;
+                font-family: Lato;
+            }
+            .description{
+                font-size: .9em;
+                line-height: 1.7em;
+                padding: 5px 0;
+            }
+            .formContainer{
+                font-size: .85em;
+            }
+        }
+    }
+    .divider{
+        width: 100%;
+        background-color: #fff;
+        opacity: .3;
+        height: 1px;
+        
+        
+    }
+    .row2{
+        margin-top: 20px;
+        .license{
+            text-align: center;
+            font-size: .9em;
+        }
+        .copyright{
+            font-size: .8em;
+            margin-top: 15px;
+            text-align: center;
+            opacity: .7;
+        }
+    }
+}
+@media screen and (min-width:800px ){
+    .footer{
+        padding: 35px 35px;
+        .row1{
+            flex-direction: row;
+            margin-bottom: 35px;
+            .links{
+                flex: 1 1 0;
+                margin: 0;
+                order:0;
+
+                .socialLinksContainer{
+                    display: block;
+                    margin-top: 30px;
+                    font-size: 1em;
+                }
+                .logo{
+                    display: inline-block;
+                }
+            }
+            .newsletter{
+                margin: 0;
+                .title{
+                    font-size: 1.5em;
+
+                }
+                .description{
+                    font-size: 1.1em;
+                }
+                .formContainer{
+                    font-size: 1.1em;
+                }
+            }
+        }
+        .row2{
+            margin-top: 20px;
+            .license{
+                text-align: left;
+                font-size: 1.2em;
+            }
+            .copyright{
+                margin-top: 15px;
+                text-align: left;
+                font-size: 1em;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.heading {
+    font-size: 15px;
+    font-weight: 500;
+    
+}
+.description{
+    a{
+        color: #1A237E;
+        &:hover{
+            text-decoration: underline !important;
+        }
+    }
+}

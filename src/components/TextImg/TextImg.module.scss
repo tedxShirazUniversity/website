@@ -1,0 +1,101 @@
+@import "../../sass/general.scss";
+$imgAndTextPadding: calc(3vw + 10px);
+
+.container {
+    display: flex;
+    @include fontSize(.70em, 1.8em);
+    .imgContainer {
+        position: relative;
+        img {
+            position: sticky;
+            top: 110px;
+            left: 0;
+        }
+    }
+
+    .text {
+        margin: 0 0 0 $imgAndTextPadding;
+        .title {
+            
+            font-size: 2em;
+            margin-bottom: 30px;
+            font-family: Lato;
+        
+        }
+
+        .description {
+            font-size: 1.22em;
+            line-height: 1.6em;
+            color: rgba(0, 0, 0, .80);
+        }
+    }
+
+    &.rightImage {
+        .imgContainer {
+            order: 2;
+        }
+
+        .text {
+            margin: 0 $imgAndTextPadding 0 0;
+        }
+    }
+
+    &.per{
+        .text{
+            .title {
+                text-align: right;
+                direction: rtl;
+                font-family: Vazir;
+                font-size: 2.2em;
+            }
+            .description {
+                text-align: right;
+                direction: rtl;
+                font-family: Vazir;
+                line-height: 1.9em;
+                font-size: 1.25em;
+                color: rgba(0,0,0,.75);
+            }
+        }
+    }
+
+    
+    
+    
+
+    @media screen and (max-width:1000px) {
+        max-width: 600px; //
+        margin: 0 auto; //
+        flex-direction: column; //
+
+        .imgContainer {
+            width: 100%;
+            margin-bottom: 20px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .text {
+            margin: 0 0 0 0;
+            width: 100%;
+
+            .title {
+                margin-bottom: 15px;
+                // text-align: center;
+            }
+        }
+
+        &.rightImage {
+            .imgContainer {
+                order: 0;
+            }
+        }
+    }
+}
+
+.showMoreButton{
+    // background-color: #f00;
+    display: inline-block;
+}

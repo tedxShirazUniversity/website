@@ -1,0 +1,15 @@
+@mixin responsiveTxt {
+    font-size: calc(.8em + 1.5 * ((100vw - 320px) / 680));
+    // font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+}
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+@mixin fontSize($min-font-size, $max-font-size) {
+    font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * (100vw - 320px)/680);
+}
+
+@mixin lightBoxShadow{
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,.08);
+    // box-shadow: 0px 15px 20px 0px rgba(0,0,0,0.16);
+}

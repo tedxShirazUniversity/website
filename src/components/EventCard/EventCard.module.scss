@@ -1,0 +1,28 @@
+@import "../../sass/general.scss";
+.container {
+    display: flex;
+    flex-direction: column;
+    .header {
+        font-family: Lato;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 1.3em;
+        .title {
+            // font-weight: 600;
+            font-size: 1em;
+            color: rgba(0, 0, 0, .9);
+        }
+    }
+    .date {
+        color: rgba(0, 0, 0, .8);
+        font-size: .9em;
+    }
+    .imageContainer {
+        width: 100%;
+        margin-top: 13px;
+        img {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.socialLinks {
+    display: flex;
+    li {
+        margin-right: 2em;
+        opacity: .7;
+        transition: opacity .2s,transform .1s;
+        .icon{
+            font-size: 2.8em;
+            // color: inherit;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover {
+            opacity: 1;
+            transform: translateY(-5px) scale(1.05);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+    // button {
+    //     //// to hide anchor text
+    //     width: 1px;
+    //     height: 1px;
+    //     overflow: hidden;
+    //     white-space: nowrap;
+    //     clip-path: inset(100%);
+    //     clip: rect(1px, 1px, 1px, 1px);
+    // }
+
+    // .icon {
+    //     $iconSize: 2.3em;
+    //     background-size: $iconSize $iconSize;
+    //     width: $iconSize;
+    //     height: $iconSize;
+    //     background-repeat: no-repeat;
+    //     display: inline-block;
+    // }

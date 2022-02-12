@@ -1,0 +1,79 @@
+@import "../../sass/general.scss";
+
+.card {
+    $innerPadding: 2.3em;
+    @media screen and (max-width:450px) {
+        $innerPadding: 1.8em;
+    }
+
+    @include fontSize(.75em, 2.3em);
+    @include lightBoxShadow;
+    font-family: "Lato";
+    display: flex;
+    flex-direction: column;
+    .imgContainer {
+        height: 300px;
+        background-color: #eee;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .header {
+        padding: $innerPadding $innerPadding 0 $innerPadding;
+
+        .title {
+            font-size: 1.5em;
+            font-family: 'Montserrat';
+            font-weight: 600;
+            color: rgba(0, 0, 0, .8);
+        }
+
+        .sub {
+            font-size: .9em;
+            margin-top: $innerPadding/3;
+            color: rgba(0, 0, 0, .50);
+            user-select: none;
+        }
+    }
+
+    .descriptionContainer {
+        padding: 0 $innerPadding;
+        margin: $innerPadding/4 0;
+
+        .description {
+            color: rgba(0, 0, 0, .6);
+            line-height: 1.6em;
+
+            &.per {
+                color: rgba(0, 0, 0, .52);
+                line-height: 1.9;
+                font-family: "vazir";
+                direction: rtl;
+            }
+        }
+    }
+
+    .buttonContainer {
+        padding: 0 $innerPadding $innerPadding $innerPadding;
+
+        button {
+            font-family: 'Montserrat';
+            font-size: .8em;
+            letter-spacing: 1px;
+            border: none;
+            background-color: inherit;
+            background-color: #fff;
+            font-weight: 700;
+            cursor: pointer;
+            padding: .6em .86em;
+            transition: letter-spacing .2s;
+
+            &:hover {
+                letter-spacing: 2px;
+            }
+        }
+    }
+}
